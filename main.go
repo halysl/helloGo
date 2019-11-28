@@ -1,7 +1,7 @@
 package main
 
-import "mycode/helloworld/catchcats"
+import "helloGo/gin_study"
 
 func main() {
-	catchcats.Run()
+	gin_study.Run()
 }
