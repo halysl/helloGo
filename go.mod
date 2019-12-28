@@ -2,4 +2,8 @@ module mycode/helloworld
 
 go 1.13
 
-require golang.org/x/tools v0.0.0-20191122232904-2a6ccf25d769 // indirect
+require (
+	github.com/mattn/go-sqlite3 v2.0.1+incompatible // indirect
+	github.com/urfave/cli/v2 v2.0.0
+	golang.org/x/tools v0.0.0-20191122232904-2a6ccf25d769 // indirect
+)
