@@ -1,4 +1,4 @@
-package main
+package macVmState
 
 import (
 	"fmt"
@@ -61,7 +61,7 @@ func (v *Vmstat) joinInfo(parseinfo map[string]int64) {
 	v.Inactive_Memory = int(parseinfo["Pages inactive"] / 1024)
 }
 
-func main() {
+func Run() {
 	cmd := "vm_stat"
 	vm_info := RunCmd(cmd)
 	parse_info := parseInfo(vm_info)
