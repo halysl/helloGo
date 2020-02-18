@@ -4,29 +4,29 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"strings"
 	"time"
 )
 
 /* 用于爬取 美国农业部 公布的 自然农作物 的水彩画
-*/
+ */
+
 type AllInfo []Urls
 
 type Urls struct {
-	page int
+	page      int
 	urlStruct []Url
 }
 
 type Url struct {
-	url string
-	number int
-	artist string
-	year int
+	url            string
+	number         int
+	artist         string
+	year           int
 	scientificName string
-	commonName string
-	country string
-	specimen string
-	picUrl string
+	commonName     string
+	country        string
+	specimen       string
+	picUrl         string
 }
 
 const base_url = "https://usdawatercolors.nal.usda.gov/pom/search.xhtml?start=0"
@@ -38,13 +38,15 @@ func Run() {
 		urls := Urls{page: getPage(data)}
 		urls.urlStruct = getItemsInfo(data)
 		info = append(info, urls)
-		for next_url, have_next := getNextUrl(data);have_next {
+		next_url, have_next := getNextUrl(data)
+		for have_next {
 			data, statusCode = httpGet(next_url)
 			if statusCode == 200 {
 				urls := Urls{page: getPage(data)}
 				urls.urlStruct = getItemsInfo(data)
 				info = append(info, urls)
 			}
+			next_url, have_next = getNextUrl(data)
 		}
 	}
 }
@@ -68,12 +70,14 @@ func httpGet(url string) (content string, statusCode int) {
 	return
 }
 
-func getNextUrl(data string) (string, bool) {}
+func getNextUrl(data string) (string, bool) {
+	return "", false
+}
 
 func getItemsInfo(data string) []Url {
-	return []Url
+	return []Url{}
 }
 
 func getPage(data string) int {
-
+	return 0
 }
