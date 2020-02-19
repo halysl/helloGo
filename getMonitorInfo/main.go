@@ -1,9 +1,11 @@
 package main
 
 import (
-	"mycode/getMonitorInfo/db"
-	"mycode/getMonitorInfo/getInfo"
 	"time"
+
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/halysl/helloGO/getMonitorInfo/getInfo"
+	"github.com/halysl/helloGo/getMonitorInfo/db"
 )
 
 func main() {
@@ -18,4 +20,3 @@ func main() {
 		db.Update_sql(data)
 	}
 }
-

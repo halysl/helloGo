@@ -10,7 +10,11 @@
             "request": "launch",
             "mode": "auto",
             "program": "${fileDirname}",
-            "env": {},
+            "env": {
+                "GOROOT": "/usr/local/Cellar/go/1.13.4/libexec",
+                "GOPATH": "/Users/light/go",
+                "GOPROXY": "https://goproxy.io"
+            },
             "args": []
         }
     ]

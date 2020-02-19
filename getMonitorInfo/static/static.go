@@ -4,13 +4,13 @@ package static
 var (
 	UserName = "user"
 	Password = "passwd"
-	Ip = "*"
-	Port = "3306"
-	DbName = "*"
+	IP       = "*"
+	Port     = "3306"
+	DbName   = "*"
 )
 
 var (
-	BaseUrl = "http://*:9090"
-	BaseTargetUrl = BaseUrl + "/api/v1/targets"
-	BaseQueryUrl = BaseUrl + "/api/v1/query?query=%s&time=%s"
+	baseURL       = "http://*:9090"
+	baseTargetURL = baseURL + "/api/v1/targets"
+	baseQueryURL  = baseURL + "/api/v1/query?query=%s&time=%s"
 )

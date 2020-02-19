@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func Run_basis() {
+func runBasis() {
 	fmt.Printf("Hello, world or 你好，世界 or καλημ ́ρα κóσμ or こんにちはせかい\n")
 	// fmt.Printf(stringutil.Reverse("\nHellow, world."))
 	a := "1213133122"
@@ -22,59 +22,59 @@ func Run_basis() {
 	fmt.Printf("type(a)=%T,a=%s\n", c, c)
 	fmt.Printf("type(a)=%T,a=%s\n", a, a)
 	fmt.Println("i will sleep")
-	time.Sleep(10*time.Microsecond)
+	time.Sleep(10 * time.Microsecond)
 	fmt.Println("hello")
 
-	fmt.Println(use_complex())
-	fmt.Println(modified_str("test"))
-	fmt.Println(modified_str("wqers"))
-	create_err()
-	use_slice()
-	use_map()
-	use_if()
-	use_for_1()
-	use_break_or_continue()
-	use_break_more_depth()
-	use_for_enum_dict()
-	use_switch()
-	fmt.Printf("\n a = %d b = %d max is %d", 1, 2, use_func_get_max(1, 2))
-	fmt.Printf("\n a = %d b = %d max is %d", 93, 31, use_func_get_max(93, 31))
+	fmt.Println(useComplex())
+	fmt.Println(modifiedStr("test"))
+	fmt.Println(modifiedStr("wqers"))
+	createErr()
+	useSlice()
+	useMap()
+	useIf()
+	useFor1()
+	useBreakOrContinue()
+	useBreakMoreDepth()
+	useForEnumDict()
+	useSwitch()
+	fmt.Printf("\n a = %d b = %d max is %d", 1, 2, useFuncGetMax(1, 2))
+	fmt.Printf("\n a = %d b = %d max is %d", 93, 31, useFuncGetMax(93, 31))
 
-	use_func_more_arg(1, 2, 3)
+	useFuncMoreArg(1, 2, 3)
 
-	test_a := 1
-	fmt.Printf("\n test_a is: %d, now add 1 is: %d", test_a, use_func_point_arg(&test_a))
+	testA := 1
+	fmt.Printf("\n test_a is: %d, now add 1 is: %d", testA, useFuncPointArg(&testA))
 
 	fmt.Println()
 	abb := []int{1, 2, 3}
-	slice_abb := abb[1:]
-	use_func_point_args2(slice_abb)
+	sliceAbb := abb[1:]
+	useFuncPointArgs2(sliceAbb)
 
-	use_defer()
+	useDefer()
 
 	go say("hello")
 	say("world")
 }
 
-func use_complex() complex64 {
+func useComplex() complex64 {
 	return 1 + 1i
 }
 
-func modified_str(s string) string {
+func modifiedStr(s string) string {
 	c := []byte(s)
 	c[0] = 'z'
 	s = string(c)
 	return s
 }
 
-func create_err() {
+func createErr() {
 	err := errors.New("this is a new error")
 	if err != nil {
 		fmt.Println(err)
 	}
 }
 
-func use_slice() {
+func useSlice() {
 	arr := [...]int{1, 2, 3, 4, 5, 6, 7, 8}
 	slice1 := arr[1:3]
 	fmt.Println()
@@ -85,7 +85,7 @@ func use_slice() {
 	fmt.Printf("now arr value:%d\nnow slice value:%d", arr, slice1)
 }
 
-func use_map() {
+func useMap() {
 	map1 := make(map[string]int)
 	map1["one"] = 1
 	map1["two"] = 2
@@ -99,28 +99,28 @@ func use_map() {
 	}
 }
 
-func use_random() int {
+func useRandom() int {
 	res := rand.Int()
 	return res
 }
 
-func use_if() {
-	if a := use_random(); a > 10 {
+func useIf() {
+	if a := useRandom(); a > 10 {
 		fmt.Printf("a is %d, more than 10", a)
 	} else if a == 10 {
-		fmt.Printf("a is %d, equal 10")
+		fmt.Printf("a is %d, equal 10", a)
 	} else {
-		fmt.Printf("a is %d, less than 10")
+		fmt.Printf("a is %d, less than 10", a)
 	}
 }
 
-func use_for_1() {
+func useFor1() {
 	for i := 0; i < 10; i++ {
 		fmt.Printf("\nnow number is %d", i)
 	}
 }
 
-func use_break_or_continue() {
+func useBreakOrContinue() {
 	fmt.Println()
 	for i := 0; i < 10; i++ {
 		if i == 5 {
@@ -138,35 +138,35 @@ func use_break_or_continue() {
 	}
 }
 
-func use_break_more_depth() {
+func useBreakMoreDepth() {
 	fmt.Println()
-	for i := 0; i < 5 ; i++ {
+	for i := 0; i < 5; i++ {
 		for j := 0; j < 5; j++ {
-			if i * j == 3 {
+			if i*j == 3 {
 				break
 			}
-			fmt.Printf("\n %d * %d = %d", i, j, i * j)
+			fmt.Printf("\n %d * %d = %d", i, j, i*j)
 		}
 	}
 
 	fmt.Println()
 test:
-	for i := 0; i < 5 ; i++ {
+	for i := 0; i < 5; i++ {
 		for j := 0; j < 5; j++ {
-			if i * j == 3 {
+			if i*j == 3 {
 				break test
 			}
-			fmt.Printf("\n %d * %d = %d", i, j, i * j)
+			fmt.Printf("\n %d * %d = %d", i, j, i*j)
 		}
 	}
 }
 
-func use_for_enum_dict() {
-	a_map := make(map[string]int)
-	a_map["first"] = 1
-	a_map["second"] = 2
-	a_map["third"] = 3
-	for k, v := range a_map {
+func useForEnumDict() {
+	aMap := make(map[string]int)
+	aMap["first"] = 1
+	aMap["second"] = 2
+	aMap["third"] = 3
+	for k, v := range aMap {
 		fmt.Printf("\na_map['%s'] = %d", k, v)
 	}
 	list := [...]int{1, 2, 3, 4, 5}
@@ -176,7 +176,7 @@ func use_for_enum_dict() {
 	}
 }
 
-func use_switch() {
+func useSwitch() {
 	fmt.Println()
 	i := 3
 	switch i {
@@ -210,7 +210,7 @@ func use_switch() {
 	}
 }
 
-func use_func_get_max(a, b int) (max int) {
+func useFuncGetMax(a, b int) (max int) {
 	max = a
 	if a < b {
 		max = b
@@ -218,29 +218,28 @@ func use_func_get_max(a, b int) (max int) {
 	return
 }
 
-func use_func_more_arg(arg ...int) {
+func useFuncMoreArg(arg ...int) {
 	for i, v := range arg {
 		fmt.Printf("\n now arg[%d]: %d", i, v)
 	}
 }
 
-func use_func_point_arg(a *int) int {
+func useFuncPointArg(a *int) int {
 	*a = *a + 1
 	return *a
 }
 
-func use_func_point_args2(a []int) {
+func useFuncPointArgs2(a []int) {
 	fmt.Println(a[0])
-	a[0] = - a[0]
+	a[0] = -a[0]
 	fmt.Println(a[0])
 }
 
-func use_defer() {
-	for i:=0;i<5;i++ {
+func useDefer() {
+	for i := 0; i < 5; i++ {
 		defer fmt.Println(i)
 	}
 }
-
 
 func say(s string) {
 	for i := 0; i < 5; i++ {

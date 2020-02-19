@@ -1,14 +1,13 @@
-package getInfo
+package getinfo
 
 import (
 	"errors"
 	"fmt"
 	"io/ioutil"
 	"log"
-	"net/http"
 	"mycode/getMonitorInfo/static"
+	"net/http"
 )
-
 
 func httpGet(url string) (httpGetData []byte, statusCode int) {
 	// get 请求从 url 拿数据，返回 []byte, status code

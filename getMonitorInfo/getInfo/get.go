@@ -51,12 +51,6 @@ func GetOriginInfo() []InstanceData {
 	//metricResultMap["node_memory_available"] = ProcessNodeMemory(metric["node_memory_available"], "node_memory_available", nowTimestamp)
 
 
-
-
-	for k, v := range all_target {
-		instanceList[k].Target = v.Instance
-	}
-
 	for k, v := range instanceList {
 		for _, temp := range all_uptime.MetricInfoList {
 			if temp.Instance == v.Target {

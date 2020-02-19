@@ -21,11 +21,9 @@ func parseTimeByHour(t string, v metricInfo) string {
 	return d.String()
 }
 
-
 func parseUnitToGB(v metricInfo) string {
 	temp, _ := strconv.ParseFloat(v.Value, 64)
 	temp = temp / 1024 / 1024 / 1024
 	temp2str := strconv.FormatFloat(temp, 'f', 2, 64)
 	return temp2str
 }
-
