@@ -1,5 +1,7 @@
 package main
 
 func main() {
-	iterMap()
+	// iterMap()
+	interestTest()
+	interestScheduledInvestmentTest()
 }
