@@ -4,4 +4,6 @@ func main() {
 	// iterMap()
 	interestTest()
 	interestScheduledInvestmentTest()
+
+	printWordCountTest()
 }
