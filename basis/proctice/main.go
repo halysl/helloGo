@@ -6,4 +6,12 @@ func main() {
 	interestScheduledInvestmentTest()
 
 	printWordCountTest()
+
+	closure01Test()
+
+	deferTest()
+
+	defer02Test()
+
+	distributionTest()
 }
