@@ -2,16 +2,20 @@ package main
 
 func main() {
 	// iterMap()
-	interestTest()
-	interestScheduledInvestmentTest()
+	// interestTest()
+	// interestScheduledInvestmentTest()
 
-	printWordCountTest()
+	// printWordCountTest()
 
-	closure01Test()
+	// closure01Test()
 
-	deferTest()
+	// deferTest()
 
-	defer02Test()
+	// defer02Test()
 
-	distributionTest()
+	// distributionTest()
+
+	// structTest()
+
+	studentManagerTest()
 }
