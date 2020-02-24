@@ -4,8 +4,11 @@ import "fmt"
 
 const yearDay = 365
 
+type money = float64
+type day = int
+
 // getAllMoneyScheduledInvestment 代表定投，参数 interestRate 代表年复利
-func getAllMoneyScheduledInvestment(principal float64, interestRate float64, cycle int, cycleMoney float64, duration int) (float64, float64) {
+func getAllMoneyScheduledInvestment(principal money, interestRate money, cycle day, cycleMoney money, duration day) (money, money) {
 	// 定期投资，按日计算收益，利息计入新的资金
 	allMoney := principal
 	nowCycle := cycle
@@ -22,12 +25,12 @@ func getAllMoneyScheduledInvestment(principal float64, interestRate float64, cyc
 	return principal, allMoney
 }
 
-func getAllMoney(principal float64, interestRate float64, duration int) float64 {
+func getAllMoney(principal money, interestRate money, duration day) money {
 	allMoney := principal*interestRate*float64(duration)/yearDay + principal
 	return allMoney
 }
 
-func getInterest(principal float64, allmoney float64) float64 {
+func getInterest(principal money, allmoney money) money {
 	return allmoney - principal
 }
 
