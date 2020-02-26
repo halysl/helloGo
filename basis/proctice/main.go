@@ -17,5 +17,25 @@ func main() {
 
 	// structTest()
 
-	studentManagerTest()
+	// studentManagerTest()
+	
+	// hellotest()
+
+	// oneProcessTest()
+
+	// defaultProcessTest()
+
+	// channelTest()
+
+	// bufferChannelTest()
+
+	// singleChannelTest()
+
+	// mutexTest()
+
+	// rwmutexTest()
+
+	// rand64CalcSum()
+
+	bufioDemo()
 }
