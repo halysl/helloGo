@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"mycode/getMonitorInfo/static"
+	"getMonitorInfo/static"
 	"net/http"
 )
 
