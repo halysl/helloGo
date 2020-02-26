@@ -1,4 +1,4 @@
-package split
+package testproctise
 
 func Fib(n int) int {
 	if n < 2 {

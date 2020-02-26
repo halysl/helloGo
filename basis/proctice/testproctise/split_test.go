@@ -1,4 +1,4 @@
-package split
+package testproctise
 
 import (
 	"reflect"
@@ -61,4 +61,12 @@ func BenchmarkSplit(b *testing.B) {
 	for i :=0; i < b.N; i++ {
 		Split("a:b:c", ":")
 	}
+}
+
+func BenchmarkSplitParallel(b *testing.B) {
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			Split("AA::BB::CC", ":")
+		}
+	})
 }
