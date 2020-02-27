@@ -1,7 +1,6 @@
 package testproctise
 
 import (
-	"fmt"
 	"strings"
 )
 
