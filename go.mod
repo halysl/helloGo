@@ -8,6 +8,7 @@ require (
 	github.com/go-ole/go-ole v1.2.4 // indirect
 	github.com/golang/protobuf v1.3.4
 	github.com/shirou/gopsutil v2.20.2+incompatible
+	github.com/sirupsen/logrus v1.4.2
 	github.com/urfave/cli/v2 v2.1.1
 	github.com/vmihailenco/msgpack v4.0.4+incompatible
 )
