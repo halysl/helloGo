@@ -37,5 +37,26 @@ func main() {
 
 	// rand64CalcSum()
 
-	bufioDemo()
+	// bufioDemo()
+
+	// timeDemo()
+
+	// timestampDemo()
+
+	// osDemo()
+
+	//logDemo()
+	//logToFile()
+	//customLog()
+
+	//readFromFile()
+
+	//strcovDemo()
+
+	//gobDemo()
+	//
+	//msgpackDemo()
+	//msgpackDemo2()
+
+	gopsutilDemo()
 }
