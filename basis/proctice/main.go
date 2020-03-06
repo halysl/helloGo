@@ -35,7 +35,7 @@ func main() {
 
 	// rwmutexTest()
 
-	rand64CalcSum()
+	// rand64CalcSum()
 
 	// bufioDemo()
 
@@ -61,4 +61,7 @@ func main() {
 	//gopsutilDemo()
 
 	//logrusDemo()
+
+	sameDemo()
+	errDemo()
 }
