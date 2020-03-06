@@ -11,4 +11,5 @@ require (
 	github.com/sirupsen/logrus v1.4.2
 	github.com/urfave/cli/v2 v2.1.1
 	github.com/vmihailenco/msgpack v4.0.4+incompatible
+	golang.org/x/tour v0.0.0-20200201212631-8f38c9a8d074
 )
