@@ -1,0 +1,80 @@
+{
+  "total_info": [
+    "host1\n  doing:\n    ap:[>>>>>>>>>>                                                                                          ](1/10)\n    p1:[>>>>>>>>>>>>>>>>>>>>                                                                                ](2/10)\n    p2:[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                                                                      ](3/10)\n    c1:[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                                                            ](4/10)\n    c2:[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                                                  ](5/10)\n  waiting:  ap:6 p1:7 p2:8 c1:9",
+    "host1\n  doing:\n    ap:[>>>>>>>>>>                                                                                          ](1/10)\n    p1:[>>>>>>>>>>>>>>>>>>>>                                                                                ](2/10)\n    p2:[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                                                                      ](3/10)\n    c1:[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                                                            ](4/10)\n    c2:[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                                                  ](5/10)\n  waiting:  ap:6 p1:7 p2:8 c1:9"
+  ],
+  "task_details": {
+    "host1": {
+      "doing": {
+        "AP": [
+          {"sector_id": 1,
+            "start_time": "2021-12-29T10:34:32+08:00",
+            "doing_time": "3h2m"
+          },{"sector_id": 2,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "3h1m"
+          },{"sector_id": 3,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "2h0m"
+          }
+        ],
+        "P1": [
+          {"sector_id": 1,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "3h2m"
+          },{"sector_id": 2,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "3h1m"
+          },{"sector_id": 3,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "2h0m"
+          }
+        ],
+        "P2": [
+          {"sector_id": 1,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "3h2m"
+          },{"sector_id": 2,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "3h1m"
+          },{"sector_id": 3,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "2h0m"
+          }
+        ],
+        "C1": [
+          {"sector_id": 1,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "3h2m"
+          },{"sector_id": 2,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "3h1m"
+          },{"sector_id": 3,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "2h0m"
+          }
+        ],
+        "C2": [
+          {"sector_id": 1,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "3h2m"
+          },{"sector_id": 2,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "3h1m"
+          },{"sector_id": 3,
+            "start_time": "01-02T03:04:05T2006",
+            "doing_time": "2h0m"
+          }
+        ]
+      },
+      "waiting": {
+        "AP": [1,2,3,4,5],
+        "P1": [6,7,8,9,10],
+        "P2": [11,12,13,14,15],
+        "C1": [16,17,18,19]
+      }
+    },
+    "host2": {}
+  },
+  "c2_waiting": [1,2,3,4,5,6,7]
+}

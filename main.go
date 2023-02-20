@@ -1,80 +1,51 @@
 package main
 
 import (
-	"encoding/base32"
-	"encoding/json"
 	"fmt"
-	"time"
+
+	"github.com/halysl/hellogo/basis"
+	"github.com/halysl/hellogo/experience"
+	"github.com/halysl/hellogo/tlotus"
+
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/viper"
 )
 
-const (
-	a = "a"
-	b = "b"
-	c = "c"
-)
-
-
-type App struct {
-	Id string `json:"id"`
-}
-
-type Org struct {
-	Name string `json:"name"`
-}
-
-type AppWithOrg struct {
-	App
-	Org
+func initViper() {
+	configPath := "conf/config.toml"
+	viper.SetConfigType("toml")
+	viper.SetConfigFile(configPath)
+	if err := viper.ReadInConfig(); err != nil {
+		log.Warnf("read config err %+v,try to reset config file with default value", err)
+		panic(err)
+	}
 }
 
 func main() {
-	type FruitBasket struct {
-		Name    string
-		Fruit   []string
-		Id      int64 `json:"ref"`// 声明对应的json key
-		Created time.Time
-	}
+	res, _ := experience.GenerateAddress("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJyZWFkIiwid3JpdGUiLCJzaWduIiwiYWRtaW4iXX0.dhLZxNSPEZYLfQIbPAJHzrtXchRzPmY1yrsiVKU:/ip4/127.0.0.1/tcp/1234/http")
+	show(res)
 
-	jsonData := []byte(`
-    {
-        "Name": "Standard",
-        "Fruit": [
-             "Apple",
-            "Banana",
-            "Orange"
-        ],
-        "ref": 999,
-        "Created": "2018-04-09T23:00:00Z"
-    }`)
+	basis.UseContext()
 
-	var basket FruitBasket
-	err := json.Unmarshal(jsonData, &basket)
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Printf("%+v\n", basket)
-	fmt.Println(basket.Name, basket.Fruit, basket.Id)
-	fmt.Println(basket.Created)
+	tlotus.TestTicket()
+	tlotus.TryDeclare()
+
+	show(experience.LengthOfLongestSubString(""))
+	show(experience.LengthOfLongestSubString("abcabcbb"))
+	show(experience.LengthOfLongestSubString("bbbbbbb"))
+	show(experience.LengthOfLongestSubString("pwwkew"))
+
+	experience.SortStructSlice()
+
+	experience.SortDurationSlice()
+
+	experience.DelMapKey()
+
+	show(experience.PrintdiskUsage("/Users/light/media"))
+
+	experience.JsonUnmarshalNull()
 }
 
-
-type S interface {
-	printA()
-	printB()
+func show(s interface{}) {
+	fmt.Println(s)
 }
-
-type tt func() S
-
-type Struct struct {
-	A struct {
-	    SDASD func(string) (string) `perm:"read"`
-    }
-
-}
-
-var Test map[string][]string
-
-const encodeStd = "abcdefghijklmnopqrstuvwxyz234567"
-
-// AddressEncoding defines the base32 config used for address encoding and decoding.
-var AddressEncoding = base32.NewEncoding(encodeStd)

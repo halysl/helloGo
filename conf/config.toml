@@ -1,0 +1,27 @@
+[worker]
+    [worker.http]
+        port = 50000
+
+    [worker.sealAbility]
+        ap = 1
+        p1 = 2
+        p2 = 2
+        c1 = 2
+        c2 = 3
+
+    [worker.leveldbStore]
+        path = "./leveldb/data"
+
+    [worker.minerInfo]
+        domain = "http://127.0.0.1:50001"
+        regAbilityPath = "/register/sealAbility"
+        notifyTaskFinish = "/notify/taskfinish"
+        notifyTaskFailed = "/notify/taskfailed"
+
+[db]
+    user = "root"
+    password = "123456"
+    ip = "127.0.0.1"
+    port = 3306
+    database = "SL"
+    TableSectorStorage = "t_sector_storage"
